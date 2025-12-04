@@ -1,15 +1,68 @@
-# React + TypeScript + Vite
+# Vite + Vitest + AG Grid
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React starter project demonstrating AG Grid integration with comprehensive testing using Vitest and React Testing Library.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Fast build tool and dev server
+- **Vitest** - Unit testing framework
+- **React Testing Library** - Component testing utilities
+- **AG Grid Community** - Feature-rich data grid
+- **pnpm** - Fast, disk space efficient package manager
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install dependencies:
+
+```bash
+pnpm install
+```
+
+Run development server:
+
+```bash
+pnpm dev
+```
+
+Run tests:
+
+```bash
+pnpm test
+```
+
+## Project Structure
+
+```text
+src/
+├── ag-grid/
+│   ├── simple.tsx       # Basic AG Grid example
+│   └── simple.test.tsx  # Tests using getByRole and best practices
+└── sum/
+    ├── sum.ts
+    └── sum.test.ts
+```
+
+## Example: Simple AG Grid Component
+
+See [src/ag-grid/simple.tsx](src/ag-grid/simple.tsx) for a basic AG Grid implementation with:
+
+- Column definitions
+- Row data
+- Default column configuration
+- TypeScript types
+
+## Testing Best Practices
+
+The test suite demonstrates React Testing Library best practices:
+
+- Using `getByRole` for semantic queries
+- Using `within()` for scoped queries
+- Proper async handling with `findBy*` queries
+- Testing accessibility through ARIA roles
+
+See [src/ag-grid/simple.test.tsx](src/ag-grid/simple.test.tsx) for examples.
 
 ## Expanding the ESLint configuration
 
